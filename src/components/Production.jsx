@@ -11,9 +11,10 @@ const Productioncomponent = () => {
         Crafting Excellence – <span className="highlight">From Concept to Completion.</span>
       </h2>
 
-      <div className="step-by-step">
+      <section className="step-by-step">
+        
         <h3>Step-by-Step Process</h3>
-        <img src={interior5} alt="step-by-step" />
+        
 
         <ul>
           <li><strong>Step 1: Consultation</strong> – Understand your needs and vision.</li>
@@ -22,28 +23,36 @@ const Productioncomponent = () => {
           <li><strong>Step 4: Execution</strong> – Bring the design to life with precision.</li>
           <li><strong>Step 5: Final Touches</strong> – Ensure every detail is perfect.</li>
         </ul>
-      </div>
+      
+      <img src={interior5} alt="step-by-step" />
+      </section>
 
-      <div className="material">
-        <div className="image-box">
-          <img src={interior6.jpg} alt="material" />
+      
+        <section className="material">
+          <div className="rectangle">
+          
           <p>We source sustainable, premium materials to ensure durability and elegance.</p>
           </div>
-        </div>
+          <img src={interior6} alt="material" />
+          </section>
+        
 
-        <div className="technology">
-            <div className="image-box">
-          <img src={interior7.jpg} alt="technology" />
+       
+          <section className="technology">
+          <div className="rectangle">
           <p>We use cutting-edge 3D rendering software to visualize your space before construction begins.</p>
            </div>
-        </div>
+           <img src={interior7} alt="technology" />
+           </section>
+        
 
-        <div className="Sustainable Design">
-        <div className="image-box">
-          <img src={interior8.jpg} alt="Sustainable Design" />
+        <section className="Sustainable-Design ">
+        <div className="rectangle">
+        
           <p>We are committed to sustainable design, using eco-friendly materials and practices.</p>
          </div>
-         </div>
+         <img src={interior8} alt="Sustainable-Design" />
+         </section>
       
     </div>
     );

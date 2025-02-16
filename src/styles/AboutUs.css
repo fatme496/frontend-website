@@ -1,67 +1,245 @@
-
+/* General Styles */
 .about-container {
-    padding: 50px;
-    text-align: center;
-    background-color: #f8f8f8;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: white;
+}
+
+.start-btn {
+  background-color: #FBB03B;
+  color: white;
+  border-color: #FBB03B;
+}
+
+.nav-links {
+  justify-content: space-between;
+  display: flex;
+}
+
+.nav-links li a {
+  margin: 0 30px;
+  color: #545454;
+  text-decoration: none;
+}
+
+
+/* Header */
+.header {
+  text-align:center;
+  margin: 20px 0;
+}
+
+/* Stack H2 and H1 vertically */
+.header h2,
+.header h1 {
+  display: block;   /* Ensures each heading is on its own line */
+  margin: 0;        /* Reset default margins to control spacing manually */
+  padding: 0;
+}
+
+/* H2 Styles */
+.header h2 {
+  color: #ffb400;    /* Bright accent color */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below H2 before H1 */
+}
+
+/* H1 Styles */
+.header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222; 
+  position:absolute;
+  bottom: 550px; 
+    /* Dark text color for contrast */
+}
+
+
+
+
+/* Sections */
+.our-story {
+  margin: 50px 0;
+  text-align: center;
+  padding: 20px;
+}
+.our-story , .p {
+  font-size: 20px;
+  position: absolute;
+
+}
+.mission-values {
+  margin: 166px 0 ;
+  text-align: center;
+  padding: 20px;
+}
+.mission-values , .h2 {
+  font-size: 20px;
+  position: absolute;
+}
+.our-team{
+margin: 350px 0;
+text-align: center;
+padding: 20px;
+} 
+.working-with-us
+
+/* Text Styles */
+h2 {
+  font-size: 22px;
+  color: #222;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Individual Image Styles */
+.our-story img {
+    /* Position */
+    position: absolute;   /* or relative, depending on your layout needs */
+    left: 900px;
+    top: -170px;
+  
+    /* Dimensions */
+    width: 300px;
+    height: 200px;
+  
+    /* Appearance */
+    opacity: 1;           /* 100% in Figma */
+    border-radius: 4px;   /* corner radius */
+    
+    /* Fill (Image) */
+    background-image: url("interior1.jpg");  /* Replace with your actual image path */
+    background-size: cover;    /* Ensures the image covers the entire area */
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Transform (0° means no rotation) */
+    transform: rotate(0deg);
+  
+  
+}
+
+.our-team img {
+  width: 280px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  position: absolute;
+  top: 583px;
+  right:975px;
   }
+
+.working-with-us img {
+  width: 300px;
+  height: 148px;
+  display: block;
+  margin: 20px auto;
+  position: absolute;
+  top: 783px;
+  right: 5px;
+}
+
+/* Background Rectangles */
+.rectangle {
+  background-color: #777;
+  color: white;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
   
-  h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
+  text-align: center;
+}
+
+.our-team .rectangle {
+  width: 60%;
+  padding: 20px;
   
-  h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 30px;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 10px auto;
-  }
-  
-  .our-story, .mission-values, .our-team, .working-with-us {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-  }
-  
-  .our-story img, 
-  .our-team img, 
-  .working-with-us img {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: 15px;
-  }
-  
-  .mission-values {
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-left: 5px solid #f4a261;
-  }
-  
-  .our-team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .working-with-us {
-    background-color: #ddd;
-    padding: 25px;
-    text-align: left;
-    border-left: 5px solid #555;
-  }
-  
-  
-  
+  background-color: #7f7f7f;
+  position: relative;
+  bottom: -20px;
+  left: 30px;
+}
+
+.working-with-us .rectangle {
+  width: 60%;
+  height: 105px;
+  padding: 20px;
+  background-color: #7f7f7f;
+  position: relative;
+  bottom: 318px;
+  left: 10px;
+ 
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #7f7f7f;
+  color: white;
+  padding: 30px;
+
+
+
+
+}
+
+.links a {
+  color: white;
+}
+
+.links ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.links li a {
+  text-decoration: none;
+}
+
+.links li {
+  margin-top: 10px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo h3 {
+  font-size: 24px;
+}
+
+.logo p {
+  margin: 10px 0;
+}
+
+.social-icon {
+  margin-right: 15px;
+}
+
+.social-icon img, .icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+}
