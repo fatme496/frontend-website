@@ -41,7 +41,7 @@ const Contact = () => {
       console.error("Error submitting contact form", error);
     }
   };
-};
+
 
 return (
 
@@ -97,6 +97,7 @@ return (
     </div>
   </div>
 
-);
+)
+};
 
 export default Contact;
