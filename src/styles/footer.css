@@ -32,6 +32,10 @@
   text-align: center;
   
 }
+/* New CSS rules */
+.phone-number, .email {
+  color: white; /* Set text color to white */
+}
 
 .logo h3 {
   font-size: 24px; 
@@ -73,6 +77,7 @@
 
   .logo h3 {
     font-size: 20px;
+    color: white;
   }
 
   .links ul {

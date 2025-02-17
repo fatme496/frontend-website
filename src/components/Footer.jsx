@@ -23,15 +23,18 @@ function Footer() {
 
         <div className="logo">
          <h3>LOGO</h3>
-         <p>
-             {/* <img src="../assets/icons/phone.jpg"  className="" />   */}
+          {/* <p>
+              <img src="../assets/icons/phone.jpg"  className="" />   
             01999111
          </p>
 
          <p>
-            {/* <img src="/assets/icons/mail.jpg"  className="icon" /> */}
+             <img src="/assets/icons/mail.jpg"  className="icon" /> 
              xdesign@gmail.com
-        </p>
+        </p> */}
+
+        <p className="phone-number">01999111</p>
+        <p className="email">xdesign@gmail.com</p>
 
         {/* <p>
            <a href="https://facebook.com" target="_blank" className="social-icon">
