@@ -12,7 +12,10 @@
   color: white;
   border-color: #FBB03B;
 }
-
+.navbar-logo{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  
+}
 /* Nav Links (large screens) */
 .nav-links {
   display: flex;

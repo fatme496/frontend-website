@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">LOGO</div>
+      <div className="logo">D</div>
 
       {/* Mobile menu icon */}
       <div className="menu-icon" onClick={toggleMenu}>
