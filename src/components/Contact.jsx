@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "../styles/contact.css";
 
 
@@ -29,70 +30,74 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      console.log("Form Submitted", formData);
+    try {
+      const response = await axios.post(`http://localhost:5000/api/contact`, formData);
       alert("Message sent successfully!");
-      setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+      console.log("Form Submitted", formData);
+      setFormData({ name: "", email: "", message: "" }); // Clear form after submission
+    } catch (error) {
+      console.error("Error submitting contact form", error);
     }
   };
 
-  return (
 
-      <div className="flexbox">
-        <div className="contact-container">
-          <h2>Contact</h2>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              <input
-                className="f-input"
-                type="text"
-                name="firstName"
-                placeholder="First name"
-                value={formData.firstName}
-                onChange={handleChange}
-              />
-              {errors.firstName && <span className="error">{errors.firstName}</span>}
-              <input
-                className="f-input"
-                type="text"
-                name="lastName"
-                placeholder="Last name"
-                value={formData.lastName}
-                onChange={handleChange}
-              />
-              {errors.lastName && <span className="error">{errors.lastName}</span>}
-            </div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            {errors.email && <span className="error">{errors.email}</span>}
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            {errors.phone && <span className="error">{errors.phone}</span>}
-            <textarea
-              name="message"
-              placeholder="Enter your message here..."
-              value={formData.message}
-              onChange={handleChange}
-            />
-            {errors.message && <span className="error">{errors.message}</span>}
-            <button className="button" type="submit">Send</button>
-          </form>
+return (
+
+  <div className="flexbox">
+    <div className="contact-container">
+      <h2>Contact</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <input
+            className="f-input"
+            type="text"
+            name="firstName"
+            placeholder="First name"
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+          {errors.firstName && <span className="error">{errors.firstName}</span>}
+          <input
+            className="f-input"
+            type="text"
+            name="lastName"
+            placeholder="Last name"
+            value={formData.lastName}
+            onChange={handleChange}
+          />
+          {errors.lastName && <span className="error">{errors.lastName}</span>}
         </div>
-      </div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {errors.email && <span className="error">{errors.email}</span>}
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        {errors.phone && <span className="error">{errors.phone}</span>}
+        <textarea
+          name="message"
+          placeholder="Enter your message here..."
+          value={formData.message}
+          onChange={handleChange}
+        />
+        {errors.message && <span className="error">{errors.message}</span>}
+        <button className="button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
 
-  );
+)
 };
 
 export default Contact;
