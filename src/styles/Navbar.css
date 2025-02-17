@@ -1,23 +1,103 @@
+/* Navbar base styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    padding: 15px 50px;
-    background-color: white;
-  }
-.start-btn{
-  background-color:#FBB03B ;
-  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: white;
+}
+
+.start-btn {
+  background-color: #FBB03B;
+  color: white;
   border-color: #FBB03B;
 }
-.nav-links{
-  justify-content: space-between;
+
+/* Nav Links (large screens) */
+.nav-links {
   display: flex;
+  justify-content: space-between;
+  margin: 0;
+  list-style-type: none;
 }
+
+.nav-links li {
+  margin: 0 30px;
+}
+
 .nav-links li a {
-  margin : 0 30px;
-  color:#545454;
+  color: #545454;
   text-decoration: none;
 }
 
+/* Mobile Menu Icon (Hamburger) */
+.navbar .menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
+.navbar .menu-icon span {
+  background-color: #545454;
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Stack navbar items vertically on small screens */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  /* Logo spacing */
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  /* Nav links will be hidden off-screen by default */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);  /* Initially hide off-screen */
+    transition: transform 0.3s ease;
+    margin: 0;
+  }
+
+  /* When the menu is toggled, the links will slide in */
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  /* Hamburger icon appears for mobile screens */
+  .menu-icon {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* Style for each link */
+  .nav-links li a {
+    font-size: 18px;
+    color: #545454;
+  }
+
+  /* Button style for mobile */
+  .start-btn {
+    margin-top: 20px;
+  }
+}

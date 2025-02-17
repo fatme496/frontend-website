@@ -24,21 +24,23 @@ function Footer() {
         <div className="logo">
          <h3>LOGO</h3>
          <p>
-            <img src="assets/icons/phone.jpg"  className="icon" /> 01999111
+             {/* <img src="../assets/icons/phone.jpg"  className="" />   */}
+            01999111
          </p>
 
          <p>
-            <img src="/assets/icons/mail.jpg"  className="icon" /> xdesign@gmail.com
+            {/* <img src="/assets/icons/mail.jpg"  className="icon" /> */}
+             xdesign@gmail.com
         </p>
 
-        <p>
+        {/* <p>
            <a href="https://facebook.com" target="_blank" className="social-icon">
            <img src="/assets/icons/facebook.jpg" alt="" className="icon" />
            </a>
            <a href="https://linkedin.com" target="_blank" className="social-icon">
            <img src="/assets/icons/linkedin.png" alt="" className="icon" />
            </a>
-        </p>
+        </p> */}
        </div>
     </footer>
   );

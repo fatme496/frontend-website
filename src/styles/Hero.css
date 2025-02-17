@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    flex-wrap:wrap;
   }
 
 .hero-images img {
@@ -14,8 +15,16 @@
   padding-bottom: 20px;
 }
 
-.hero-text h1{
+.hero-images img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
 
+.hero-text {
+  max-width: 600px;
+  padding-right: 30px; /* Spacing between text and images */
+}
+
+.hero-text h1{
   margin-bottom:30px;
 }
 .hero-text p{
@@ -53,4 +62,55 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px; /* Adjust padding for mobile */
+  }
+
+  .hero-images {
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .hero-images img {
+    height: 180px;
+    width: 100%;
+    max-width: 400px; /* Ensure images don’t get too wide */
+  }
+
+  .hero-text {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem; /* Adjust heading size for mobile */
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .stats {
+    flex-direction: column; /* Stack stats vertically */
+    gap: 10px;
+    text-align: center;
+  }
+
+  .stats div {
+    margin: 10px 0;
+  }
+
+  .start-btn {
+    width: 100%; /* Full width button on mobile */
+    font-size: 1.2rem;
+  }
 }

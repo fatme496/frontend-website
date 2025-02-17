@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 function Hero() {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/projects");
+    navigate("/aboutus");
   };
   return (
     <header className="hero">
