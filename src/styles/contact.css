@@ -41,12 +41,22 @@ textarea {
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: #fbb03b;
+  color: #000;
+}
+input:focus{
+  border-width: 2px;
+  border-color: #fbb03b;
+  outline: none;
 }
 
 textarea {
   resize: vertical;
   height: 100px;
+}
+textarea:focus{
+  border-color: #fbb03b;
+  outline: none;
+  border-width: 2px;
 }
 
 .button {

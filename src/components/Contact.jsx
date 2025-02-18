@@ -46,7 +46,8 @@ const Contact = () => {
 
 
 return (
-  
+
+  <div className="flexbox">
     <div className="contact-container">
       <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
@@ -96,6 +97,7 @@ return (
         <div><button className="button" type="submit">Send</button></div>
       </form>
     </div>
+  </div>
 
 )
 };
