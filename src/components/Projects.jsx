@@ -8,7 +8,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/projects");
+        const response = await axios.get("http://localhost:5001/api/projects");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -25,7 +25,7 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project._id} className="project-card">
-            <img src={ `http://localhost:5000/uploads/${project.image} `} alt={project.title} />
+            <img src={`http://localhost:5001/uploads/${project.image}`} alt={project.title} />
             <h3>{project.title}</h3>
             <p>{project.location}</p>
           </div>

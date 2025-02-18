@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/projects";  // Backend URL
+const API_URL = "http://localhost:5001/api/projects";  // Backend URL
 
 // Fetch all projects
 export const getProjects = async () => {

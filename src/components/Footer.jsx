@@ -1,4 +1,5 @@
 import "../styles/Footer.css";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 function Footer() {
   return (
@@ -13,32 +14,37 @@ function Footer() {
       <div className="links">
         <h3>LINKS</h3>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Project</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Production</a></li>
+        <li><Link to="/">Home</Link></li> {/* Link to Home page */}
+          <li><Link to="/projects">Projects</Link></li> {/* Link to Project page */}
+          <li><Link to="/contact">Contact Us</Link></li> {/* Link to Contact Us page */}
+          <li><Link to="/about">About Us</Link></li> {/* Link to About Us page */}
+          <li><Link to="/production">Production</Link></li> {/* Link to Production page */}
         </ul>
       </div>
 
         <div className="logo">
          <h3>LOGO</h3>
-         <p>
-            <img src="assets/icons/phone.jpg"  className="icon" /> 01999111
+          {/* <p>
+              <img src="../assets/icons/phone.jpg"  className="" />   
+            01999111
          </p>
 
          <p>
-            <img src="/assets/icons/mail.jpg"  className="icon" /> xdesign@gmail.com
-        </p>
+             <img src="/assets/icons/mail.jpg"  className="icon" /> 
+             xdesign@gmail.com
+        </p> */}
 
-        <p>
+        <p className="phone-number">01999111</p>
+        <p className="email">xdesign@gmail.com</p>
+
+        {/* <p>
            <a href="https://facebook.com" target="_blank" className="social-icon">
            <img src="/assets/icons/facebook.jpg" alt="" className="icon" />
            </a>
            <a href="https://linkedin.com" target="_blank" className="social-icon">
            <img src="/assets/icons/linkedin.png" alt="" className="icon" />
            </a>
-        </p>
+        </p> */}
        </div>
     </footer>
   );
