@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import interior2 from "../assets/images/interior2.jpg";
+import interior1 from "../assets/images/interior1.jpg";
 import "../styles/contact.css";
 
 
@@ -44,8 +46,7 @@ const Contact = () => {
 
 
 return (
-
-  <div className="flexbox">
+  
     <div className="contact-container">
       <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
@@ -60,7 +61,7 @@ return (
           />
           {errors.firstName && <span className="error">{errors.firstName}</span>}
           <input
-            className="f-input"
+            className="f-input second"
             type="text"
             name="lastName"
             placeholder="Last name"
@@ -69,15 +70,15 @@ return (
           />
           {errors.lastName && <span className="error">{errors.lastName}</span>}
         </div>
-        <input
+        <div><input
           type="email"
           name="email"
           placeholder="Email Address"
           value={formData.email}
           onChange={handleChange}
-        />
+        /></div>
         {errors.email && <span className="error">{errors.email}</span>}
-        <input
+        <div><input
           type="text"
           name="phone"
           placeholder="Phone Number"
@@ -90,12 +91,11 @@ return (
           placeholder="Enter your message here..."
           value={formData.message}
           onChange={handleChange}
-        />
+        /></div>
         {errors.message && <span className="error">{errors.message}</span>}
-        <button className="button" type="submit">Send</button>
+        <div><button className="button" type="submit">Send</button></div>
       </form>
     </div>
-  </div>
 
 )
 };
